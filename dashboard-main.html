@@ -1,0 +1,305 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Dashboard - Main</title>
+  <meta name="description" content="A personal financial mobile app...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+  <a class="navbar-brand" href="#"><img src="images/logo.svg" style="width:160px; transition: 0.4s;" id='logo'></a>
+</nav>
+
+  <!-- Page Content -->
+  <div class="page-content" style="margin-top:50px">
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Dashboard Card - Top -->
+      <div class="container mb-3">
+        <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
+          <span>Welcome,</span>
+          <h3 class="mb-3 title">Femi</h3>
+        </div>
+        <div class="card card-small">
+          <div class="dashboard-card">
+            <h6 class="mb-1">Total amount saved:</h6>
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <h3 class="fig-lg"><span id="currency">₦</span>116,000,000.00</h3>
+                <p id="incomplete-setup"><a href="#">Finish account setup</a></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"><span class="badge mr-3 badge-pill badge-success">TOTAL SAVINGS GOAL:</span>
+                <h6 class="ml-2 mt-1">220,000,000.00</h6>
+              </div>
+              <div class="col-6"><span class="badge mr-3 badge-pill badge-warning">DAYS TO GOAL:</span>
+                <h6 class="ml-2 mt-1">201</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Goals Tab -->
+
+      <div class="container mb-3">
+        <div class="card card-small">
+          <div class="dashboard-card">
+            <h6 class="mb-3">All Goals</h6>
+            <div class="rounded">
+              <!-- Rounded tabs -->
+              <ul id="myTab" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center bg-light border-0 rounded-nav">
+                <li class="nav-item flex-sm-fill">
+                  <a id="active-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" class="nav-link border-0 text-uppercase font-weight-bold active">Active</a>
+                </li>
+                <li class="nav-item flex-sm-fill">
+                  <a id="complete-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" class="nav-link border-0 text-uppercase font-weight-bold">Complete</a>
+                </li>
+                <li class="nav-item flex-sm-fill">
+                  <a id="archived-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" class="nav-link border-0 text-uppercase font-weight-bold">Archived</a>
+                </li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade show active">
+                  <div class="table-responsive">
+                    <table class="table mt-2">
+                      <thead>
+                        <tr>  
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="border-0">
+                            <div class="">
+                              <span class="complete-rate green">100%</span>
+                              <div class="ml-2 mr-4 d-inline-block align-middle">
+                                <h6 class="mb-0 title"> <a href="#" class="text-dark d-inline-block align-middle">Summer Vacation</a></h6><span class="text-muted font-weight-normal d-block">₦500,000</span>
+                              </div>
+                                <div class="ml-4 d-inline-block more">
+                                  <button id="more-btn" class="more-btn">
+                                      <span class="more-dot"></span>
+                                      <span class="more-dot"></span>
+                                      <span class="more-dot"></span>
+                                  </button>
+                                  <div class="more-menu">
+                                      <div class="more-menu-caret">
+                                          <div class="more-menu-caret-outer"></div>
+                                          <div class="more-menu-caret-inner"></div>
+                                      </div>
+                                      <ul class="more-menu-items" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 1</button>
+                                          </li>
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 2</button>
+                                          </li>
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 3</button>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="">
+                              <span class="complete-rate orange">50%</span>
+                              <div class="ml-2 d-inline-block align-middle">
+                                <h6 class="mb-0 title"><a href="#" class="text-dark d-inline-block">My Wedding</a></h6><span class="text-muted font-weight-normal">₦500,000
+                                  </span>
+                              </div>
+                              <div class="ml-4 d-inline-block more">
+                                  <button id="more-btn" class="more-btn">
+                                      <span class="more-dot"></span>
+                                      <span class="more-dot"></span>
+                                      <span class="more-dot"></span>
+                                  </button>
+                                  <div class="more-menu" aria-hidden="true">
+                                      <div class="more-menu-caret">
+                                          <div class="more-menu-caret-outer"></div>
+                                          <div class="more-menu-caret-inner"></div>
+                                      </div>
+                                      <ul class="more-menu-items" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 1</button>
+                                          </li>
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 2</button>
+                                          </li>
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 3</button>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </div>
+                          </th> 
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="">
+                              <span class="complete-rate red">25%</span>
+                              <div class="ml-2 d-inline-block align-middle">
+                                <h6 class="mb-0 title"> <a href="#" class="text-dark d-inline-block">Charity Donation</a></h6><span class="text-muted font-weight-normal">₦500,000 </span>
+                              </div>
+                              <div class="ml-4 d-inline-block more">
+                                  <button id="more-btn" class="more-btn">
+                                      <span class="more-dot"></span>
+                                      <span class="more-dot"></span>
+                                      <span class="more-dot"></span>
+                                  </button>
+                                  <div class="more-menu" aria-hidden="true">
+                                      <div class="more-menu-caret">
+                                          <div class="more-menu-caret-outer"></div>
+                                          <div class="more-menu-caret-inner"></div>
+                                      </div>
+                                      <ul class="more-menu-items" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 1</button>
+                                          </li>
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 2</button>
+                                          </li>
+                                          <li class="more-menu-item" role="presentation">
+                                              <button type="button" class="more-menu-btn" role="menuitem">Action 3</button>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </div>
+                            </th>  
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade">
+                  <div class="table-responsive">
+                    <table class="table mt-2">
+                      <thead>
+                        <tr>  
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="border-0">
+                            <div class="">
+                              <span class="complete-rate green">100%</span>
+                              <div class="ml-2 d-inline-block align-middle">
+                                <h6 class="mb-0 title"> <a href="#" class="text-dark d-inline-block align-middle">Summer Vacation</a></h6><span class="text-muted font-weight-normal d-block">₦500,000</span>
+                              </div>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="">
+                              <span class="complete-rate red">25%</span>
+                              <div class="ml-2 d-inline-block align-middle">
+                                <h6 class="mb-0 title"> <a href="#" class="text-dark d-inline-block">Charity Donation</a></h6><span class="text-muted font-weight-normal">₦500,000 </span>
+                              </div>
+                            </div>
+                            </th>  
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div id="contact" role="tabpanel" aria-labelledby="contact-tab" class="tab-pane fade">
+                  <div class="table-responsive">
+                    <table class="table mt-2">
+                      <thead>
+                        <tr>  
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <div class="">
+                              <span class="complete-rate red">25%</span>
+                              <div class="ml-2 d-inline-block align-middle">
+                                <h6 class="mb-0 title"> <a href="#" class="text-dark d-inline-block">Charity Donation</a></h6><span class="text-muted font-weight-normal">₦500,000 </span>
+                              </div>
+                            </div>
+                            </th>  
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- End rounded tabs -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.onscroll = function() {
+      growShrinkLogo()
+    };
+
+    function growShrinkLogo() {
+      var Logo = document.getElementById("logo")
+      if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+        Logo.style.width = '120px';
+      } else {
+        Logo.style.width = '160px';
+      }
+    }
+    </script>
+  <!-- For More Ellipsis Menu  -->
+
+  <script>
+    var el = document.querySelector('.more');
+    var btn = el.querySelector('.more-btn');
+    var menu = el.querySelector('.more-menu');
+    var visible = false;
+
+    function showMenu(e) {
+        e.preventDefault();
+        if (!visible) {
+            visible = true;
+            el.classList.add('show-more-menu');
+            menu.setAttribute('aria-hidden', false);
+            document.addEventListener('mousedown', hideMenu, false);
+        }
+    }
+
+    function hideMenu(e) {
+        if (btn.contains(e.target)) {
+            return;
+        }
+        if (visible) {
+            visible = false;
+            el.classList.remove('show-more-menu');
+            menu.setAttribute('aria-hidden', true);
+            document.removeEventListener('mousedown', hideMenu);
+        }
+    }
+
+    btn.addEventListener('click', showMenu, false);
+  </script>
+
+  <script async defer src="js/buttons.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

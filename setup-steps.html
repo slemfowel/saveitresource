@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Save It - Get Started</title>
+  <meta name="description" content="A personal financial mobile app...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+  <a class="navbar-brand" href="#"><img src="images/logo.svg" style="width:160px; transition: 0.4s;" id='logo'></a>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page-content" style="margin-top:80px">
+    <!-- Content -->
+    <div class="content clearfix">
+      <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto text-center">
+          <h4 class="mb-4">Account Activation</h4>
+          <p class="mb-2">Let'swalk you through 3 simple steps to get started with your SaveIt account</p>
+        </div>
+      <div id="accordion">
+        <div class="card">
+          <div class="accordion-card-header" id="headingOne">
+            <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <h6 class="mb-2">STEP 1</h6>
+              <h5 class="mb-0 title">Automated Savings</h5>
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <img class="collapse-img" src="images/account-setup.svg" alt="SaveIt - Set up your account">
+              <p>Let's set up your SaveIt account so you can start saving automatically</p>
+              <button type="button" class="btn btn-primary">Okay</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+          <div class="accordion-card-header" id="headingTwo">
+            <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h6 class="mb-2">STEP 2</h6>
+              <h5 class="mb-0 title">Automated Withdrawals</h5>
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <img class="collapse-img" src="images/automated-withdrawals.svg" alt="SaveIt - Set up automated-withdrawals">
+              <p>Setup how and when you want to make withdrawals from your SaveIt account.</p>
+              <button type="button" class="btn btn-primary">Okay</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="accordion-card-header" id="headingThree">
+            <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <h6 class="mb-2">STEP 3</h6>
+              <h5 class="mb-0 title">Review and Activate</h5>
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <img class="collapse-img" src="images/review-activate.svg" alt="SaveIt - review your account">
+              <p>Here's a summary of how you've setup your SaveIt account.</p>
+              <button type="button" class="btn btn-primary">Okay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.onscroll = function() {
+      growShrinkLogo()
+    };
+
+    function growShrinkLogo() {
+      var Logo = document.getElementById("logo")
+      if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+        Logo.style.width = '120px';
+      } else {
+        Logo.style.width = '160px';
+      }
+    }
+    </script>
+
+    <!-- Sroll accordion into view upon collapse -->
+    <script>
+       $(function() {
+        $("#accordion").accordion({
+            autoHeight: false,
+            collapsible: true,
+            heightStyle: "content",
+            active: 0,
+            animate: 300
+        });
+        $('#accordion a').bind('click',function(){
+            var self = this;
+            setTimeout(function() {
+                theOffset = $(self).offset();
+                $('body,html').animate({ scrollTop: theOffset.top - 100 });
+            }, 310);
+        });
+     });
+    </script>
+
+  <script async defer src="js/buttons.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

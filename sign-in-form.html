@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Save It - Sign In</title>
+  <meta name="description" content="A personal financial mobile app...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+  <a class="navbar-brand" href="#"><img src="images/logo.svg" style="width:160px; transition: 0.4s;" id='logo'></a>
+</nav>
+
+  <!-- Page Content -->
+  <div class="page-content container-fluid" style="margin-top:80px">
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Form Controls -->
+      <div id="forms" class="container mb-5">
+        <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
+          <h3 class="mb-4 title text-center">Sign in</h3>
+
+        </div>
+
+        <div class="example col-lg-8 col-md-10 ml-auto mr-auto">
+
+          <!-- Form Controls-->
+          <div class="row mb-5">
+            <div class="col-md-12">
+              <form>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="form1-name" placeholder="Email" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <div class="input-group input-group-seamless">
+                      <input type="password" class="form-control" id="form2-password" placeholder="Password">
+                      <span class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="fa fa-lock"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <fieldset>
+                  <div class="row">
+                    <div class="col custom-control custom-checkbox d-block my-1 ml-4">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2" checked="">
+                        <label class="custom-control-label" for="customCheck2">Remember me</label></div> 
+                        <div class="col text-right mr-2"><a href="">Forgot Password?</a></div>
+                        </div>
+                </fieldset>
+              </form>
+              <div class="row mb-4">
+                <div class="col-md-9 ml-auto mr-auto d-flex justify-content-around buttons-wrapper">
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                </div>
+              <div class="col mt-2 text-center">
+                <a class="text-link" href="#">Create an account</a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.onscroll = function() {
+      growShrinkLogo()
+    };
+
+    function growShrinkLogo() {
+      var Logo = document.getElementById("logo")
+      if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+        Logo.style.width = '120px';
+      } else {
+        Logo.style.width = '160px';
+      }
+    }
+    </script>
+  <!-- hide / show referral field on form -->
+    <script>
+      $(function () {
+      $('#refToggle').click(function () {
+      if ($('this').is(':checked')) {
+          $("#referral").show();
+      else
+          $('#referral').hide();
+      }
+      });
+      });
+    </script>
+  <script async defer src="js/buttons.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
